@@ -1,0 +1,20 @@
+
+<div style="padding:20px">
+<h1 style="margin:auto; text-align: center; padding:5px">Rick and Morty <span class="badge bg-secondary">Characters</span></h1>
+<button type="button" class="btn btn-primary" style="width:100%" (click)="sendData()">sent Data</button>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    
+    <div class="col"  *ngFor="let character of this.rickMortyData" style="padding:10px">
+        <div class="card" >
+            <img [src]="character.image" class="card-img-top" [alt]="character.name" >
+            <div class="card-body">
+                <h5 class="card-title">{{character.name}}</h5>
+                <p class="card-text"><small class="text-muted"> <span style="font-weight: bold">Status:
+                        </span>{{character.status}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

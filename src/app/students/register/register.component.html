@@ -1,0 +1,78 @@
+<div class="container">
+  <h1>Register <span class="badge bg-secondary" style="font-weight: bold;">Gimandes</span></h1>
+  <form class="border-form">
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Name</label>
+      <input type="text" class="form-control" aria-label="readonly input example">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Last Name</label>
+      <input type="text" class="form-control" aria-label="readonly input example">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Student Code</label>
+      <input type="number" class="form-control" aria-label="readonly input example">
+    </div>
+
+  
+      <label for="exampleInputEmail1" class="form-label" style="padding:5px">
+        <span style="font-weight: bold;">
+        Gender:
+        </span> 
+      </label>
+
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Male</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Female</label>
+      </div>
+
+      
+          <div ngbDropdown class="d-inline-block">
+            <input class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle value="Toggle dropdown">
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <input ngbDropdownItem value="Action - 1">
+              <input ngbDropdownItem value="Another Action">
+            </div>
+       
+      
+     
+      </div>
+  
+
+   
+
+      
+  
+  
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+
+    <input class="btn btn-primary" style="width:100%" value="Submit" (click)="goAnotherView()">
+
+
+  </form>
+
+
+</div>

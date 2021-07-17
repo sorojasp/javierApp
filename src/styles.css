@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    
+    margin: 0;
+    padding: 0;
+  }
+
+.content{
+    padding:5px;
+    
+}
+
+
+.container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:20px
+
+  
+}
+
+.icon-header{
+  width: 60px; 
+  height: 60px; 
+  padding:5px;
+
+}
+.vertical-elements{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+
+.text-box{
+     
+  margin:5px;
+  background:rgba(247,247,247);
+  width:90%;
+  height:50px;
+  border-radius: 10px;
+  border: 2px solid #e5e5e5;
+  
+  --placeholder-color: #cdbeb5;
+  --placeholder-opacity: 1;
+
+  font-weight: bold;
+  
+  /**color:#cdbeb5;*/
+
+}
+
+.text-box:focus {
+  outline-width: 0;
+}
+
+
+
+
+
+.text-tittle{ /**used in the tittle of each page**/
+
+ font-size:2em; 
+ font-weight:bold;
+ color:rgba(60,60,60);
+ 
+}
+
+.button-generic{
+
+ border-radius: 10px;
+ box-shadow:  0 3px 0 0  #999;
+ width:90%;
+ 
+}
+
+.button-generic:focus {
+  outline-width: 0;
+}
+
+.button-generic:active {
+
+  box-shadow: 0 0px #666;
+  transform: translateY(3px);
+  }
+
+.tex-button{
+
+font-size:1em;
+font-weight: bold;
+margin:15px;
+}
+
+.text-p{
+
+ font-size:1em; 
+ color: #b4b1b0;
+ text-align: center;
+ font-weight: bold;
+
+}
+
+
+ .nav-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-title {
+  display: inline-block;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px 10px 10px 10px;
+}
