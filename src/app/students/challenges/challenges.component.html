@@ -1,7 +1,17 @@
 
 <div style="padding:20px">
 <h1 style="margin:auto; text-align: center; padding:5px">Rick and Morty <span class="badge bg-secondary">Characters</span></h1>
-<button type="button" class="btn btn-primary" style="width:100%" (click)="sendData()">sent Data</button>
+<button type="button" class="btn btn-primary" style="width:100%;margin:5px" (click)="sendData()">sent Data</button>
+
+<button type="button" class="btn btn-primary" style="width:100%;margin:5px" (click)="updateEntity()">update Data</button>
+<button type="button" class="btn btn-primary" style="width:100%;margin:5px" (click)="deleteEntity()">delete Data</button>
+
+<p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+  <p>
+   
+  </p>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     

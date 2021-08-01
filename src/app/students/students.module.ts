@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { StudentsRoutingModule } from './students-routing.module';
 import { RegisterComponent } from './register/register.component';
-import {NgbDropdownModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { ChallengesComponent } from './challenges/challenges.component';
-
-
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [RegisterComponent, ChallengesComponent],
@@ -14,8 +13,8 @@ import { ChallengesComponent } from './challenges/challenges.component';
     CommonModule,
     StudentsRoutingModule,
     NgbAlertModule,
-    NgbDropdownModule
-
+    ReactiveFormsModule,
+    
   ],
 })
 export class StudentsModule { }

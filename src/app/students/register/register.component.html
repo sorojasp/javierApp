@@ -1,78 +1,86 @@
-<div class="container">
-  <h1>Register <span class="badge bg-secondary" style="font-weight: bold;">Gimandes</span></h1>
-  <form class="border-form">
+<div style="padding:10px">
+  <form [formGroup]="studentForm">
 
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Name</label>
-      <input type="text" class="form-control" aria-label="readonly input example">
+
+
+    <div class="overflow-auto">
+      <h1>Register <span class="badge bg-secondary" style="font-weight: bold;">Gimandes</span></h1>
+      <form class="border-form">
+
+
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" style="font-weight: bold;">Name</label>
+          <input type="text" class="form-control" aria-label="readonly input example" formControlName="name"
+            name="name">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" style="font-weight: bold;">Last Name</label>
+          <input type="text" class="form-control" aria-label="readonly input example" formControlName="lastName"
+            name="lastName">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;" name="studentCode">Student
+            Code</label>
+          <input type="number" class="form-control" aria-label="readonly input example" min="1"
+            formControlName="studentCode">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Course</label>
+          <input type="number" class="form-control" aria-label="input example" min="1" formControlName="course"
+            name="course">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" style="font-weight: bold;">Home</label>
+          <input class="form-control" type="text" formControlName="home">
+        </div>
+
+        <label for="exampleInputEmail1" class="form-label" style="padding:5px" style="font-weight: bold;">
+          <span style="font-weight: bold; padding-right:5px;">
+            Gender:
+          </span>
+        </label>
+
+        <div >
+          <input type="radio" name="gender" value="male" style="padding:5px;" (click)="selectGender('male')" >
+          <label class="form-check-label" for="inlineRadio2" style="padding:5px"  >Male</label>
+          <input type="radio" name="gender" value="female" style="padding:5px;"  (click)="selectGender('female')"  checked>
+          <label class="form-check-label" for="inlineRadio2"   style="padding:5px;" >Female</label>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" style="font-weight: bold;">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" style="font-weight: bold;">Confirm Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="confirmPassword"
+            (ngModelChange)="verifyPassword($event)">
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+          A simple danger alert—check it out!
+        </div>
+
+        <input class="btn btn-primary" style="width:100%" value="Submit" (click)="goAnotherView()"
+          [disabled]="!this.enableSubmitButton">
+
+
+      </form>
+
     </div>
-
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Last Name</label>
-      <input type="text" class="form-control" aria-label="readonly input example">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label" style="font-weight: bold;">Student Code</label>
-      <input type="number" class="form-control" aria-label="readonly input example">
-    </div>
-
-  
-      <label for="exampleInputEmail1" class="form-label" style="padding:5px">
-        <span style="font-weight: bold;">
-        Gender:
-        </span> 
-      </label>
-
-
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Male</label>
-      </div>
-
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Female</label>
-      </div>
-
-      
-          <div ngbDropdown class="d-inline-block">
-            <input class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle value="Toggle dropdown">
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <input ngbDropdownItem value="Action - 1">
-              <input ngbDropdownItem value="Another Action">
-            </div>
-       
-      
-     
-      </div>
-  
-
-   
-
-      
-  
-  
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-
-    <input class="btn btn-primary" style="width:100%" value="Submit" (click)="goAnotherView()">
-
 
   </form>
-
-
 </div>

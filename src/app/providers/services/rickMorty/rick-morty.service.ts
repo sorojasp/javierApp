@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpParams } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,5 +18,18 @@ export class RickMortyService {
 
   public createUser(data:any){
     return this.http.post('http://localhost:3000/',data)
+  }
+
+  public update(data){
+    return this.http.put('http://localhost:3000/',data)
+  }
+
+  public delete(data){
+
+ 
+const params = new HttpParams()
+  .set('id', '10')
+
+    return this.http.delete('http://localhost:3000/',{params})
   }
 }
